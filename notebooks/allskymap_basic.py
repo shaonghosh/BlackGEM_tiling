@@ -1,1 +1,0 @@
-../allskymap_basic.py

@@ -39,13 +39,15 @@ def getSkymapData(skymapFilename, res=256):
 
 class RankedTileGenerator:
     def __init__(self, precomputedTileFile=None,
-                 tilefile='BlackGEMtilesPG_AV.dat'):
+                 tilefile=None):
         if precomputedTileFile is None:
-            precomputedTileFile = resource_filename('tempfile',
+            precomputedTileFile = resource_filename('BlackGEM_tiling',
                                                     'preComputed_256_NN.dat')
-        if tilefile is None:
-            tilefile = resource_filename('tempfile', 'BlackGEMtilesPG_AV.dat')
         File = open(precomputedTileFile, 'rb')
+
+        if tilefile is None:
+            tilefile = resource_filename('BlackGEM_tiling',
+                                         'BlackGEMtilesPG_AV.dat')
         self.tileData = pickle.load(File)
         self.IDs = np.array(list(self.tileData.keys()))
         ID, RA_cent, Dec_cent, gal_AV = np.loadtxt(tilefile, unpack=True)
