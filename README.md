@@ -22,6 +22,9 @@ Install this package:
 This should install the tiling code in your system. To run the code you will beed a sky-map fits file. One example
 fits file will be includes in the repo. 
 
+Running the module:
+==================
+
 In the python interpreter window, import the module:
 
 >> from BlackGEM_tiling import ranked_tiling
@@ -38,7 +41,7 @@ The return is a pandas DataFrame of the following form:
 
    tile_index  tile_prob
 
--------------------------
+- - - - - - - - - - - - - 
 
 0     13921.0   0.058268
 
