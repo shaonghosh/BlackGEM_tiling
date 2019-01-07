@@ -39,19 +39,19 @@ Create the set of ranked tiles for a given sky-map:
 
 The return is a pandas DataFrame of the following form:
 
-   tile_index  tile_prob
+rank |  tile_index | tile_prob
 
 - - - - - - - - - - - - - 
 
-0     13921.0   0.058268
+0   |  13921.0 |  0.058268
 
-1       620.0   0.054954
+1   |    620.0 |  0.054954
 
-2     14064.0   0.048635
+2   |  14064.0 |  0.048635
 
-3       536.0   0.038242
+3   |    536.0 |  0.038242
 
-4       621.0   0.026141
+4   |    621.0 |  0.026141
 
 ...
 
