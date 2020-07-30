@@ -37,7 +37,7 @@ Create a tile object:
 
 Create the set of ranked tiles for a given sky-map:
 
->> ranked_tiles = tileObj.getRankedTiles('bayestar.fits.gz')
+>> ranked_tiles = tileObj.getRankedTiles(fitsfilename='bayestar.fits.gz')
 
 The return is a pandas DataFrame of the following form:
 
