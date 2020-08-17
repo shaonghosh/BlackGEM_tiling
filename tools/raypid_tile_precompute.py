@@ -1,4 +1,4 @@
-# Copyright (C) 2018 Shaon Ghosh
+# Copyright (C) 2020 Shaon Ghosh
 #
 # This program is free software; you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by the
@@ -13,6 +13,16 @@
 # You should have received a copy of the GNU General Public License along
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+"""
+This script is an improved version of the preComputeBGTile.py to compute the 
+tile-pixel mapping. Run it using the same kind of command that you have used
+for preComputeBGTile.py
+
+Example:
+python raypid_tile_precompute.py --nside 512 --tilefile MLBG_FieldIDs_Mar2019_AV_nospecial.dat --outpath .
+"""
+
 
 from __future__ import print_function
 
@@ -96,8 +106,7 @@ for key,value in pixtiledict.items():
 tilepixdict = dict(tilepixdict)
 
 end = time.time()
-if args.verbose:
-    print('Time taken to run loop = {}'.format(end - start))
+print('Time taken to run loop = {}'.format(end - start))
 
 filename = '_'.join(['preComputed', str(nside), "NN"]) + '.dat'
 filename = os.path.join(args.outpath, filename)
